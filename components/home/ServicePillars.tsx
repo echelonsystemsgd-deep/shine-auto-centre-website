@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ArrowRight, ShieldCheck, Clock, CheckCircle2 } from "lucide-react";
+import { ChevronRight, ArrowRight, CheckCircle2 } from "lucide-react";
 import { SERVICES } from "@/lib/business";
+import { ServiceIcon } from "@/components/icons/BrandIcons";
 
 export function ServicePillars() {
   return (
@@ -34,7 +35,7 @@ export function ServicePillars() {
 
         {/* 6 Clean Service Pillar Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.slice(0, 6).map((service, idx) => (
+          {SERVICES.slice(0, 6).map((service) => (
             <div
               key={service.slug}
               className="bg-surface hover:bg-surface-raised border border-surface-border hover:border-brand-amber/50 rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-200 group shadow-sm"
@@ -68,9 +69,14 @@ export function ServicePillars() {
 
                 {/* Card Content */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-amber transition-colors mb-2">
-                    {service.title}
-                  </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-9 h-9 rounded-xl bg-brand-amber/10 border border-brand-amber/25 flex items-center justify-center text-brand-amber shrink-0">
+                      <ServiceIcon slug={service.slug} className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-brand-amber transition-colors">
+                      {service.title}
+                    </h3>
+                  </div>
 
                   <p className="text-xs text-slate-300 leading-relaxed mb-4">
                     {service.shortDescription}

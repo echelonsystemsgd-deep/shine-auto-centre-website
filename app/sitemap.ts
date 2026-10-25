@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { SERVICES } from "@/lib/business";
+import { SERVICES, getSiteUrl } from "@/lib/business";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.shineauto.co.uk";
+  const baseUrl = getSiteUrl();
   const lastModified = new Date();
 
   const coreRoutes = [

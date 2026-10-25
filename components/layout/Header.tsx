@@ -83,7 +83,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber rounded-lg p-1">
             <div className="relative w-11 h-11 rounded-full overflow-hidden bg-surface border border-surface-border p-1 group-hover:border-brand-amber transition-colors">
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/logo-clean.png"
                 alt="Shine Auto Centre Logo"
                 width={44}
                 height={44}

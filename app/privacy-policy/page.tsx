@@ -1,12 +1,30 @@
 import React from "react";
 import type { Metadata } from "next";
-import { BUSINESS_CONFIG } from "@/lib/business";
+import { BUSINESS_CONFIG, getSiteUrl } from "@/lib/business";
 import Link from "next/link";
 import { ShieldCheck, Mail, MapPin } from "lucide-react";
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
   title: "Privacy Policy | Shine Auto Bodyworks LTD",
-  description: "Privacy policy for Shine Auto Centre (Shine Auto Bodyworks LTD). Learn how we handle your personal data when requesting car repair quotes.",
+  description: "Privacy policy for Shine Auto Centre (Shine Auto Bodyworks LTD). How we handle your personal data when requesting car repair estimates.",
+  alternates: {
+    canonical: `${siteUrl}/privacy-policy`,
+  },
+  openGraph: {
+    title: "Privacy Policy | Shine Auto Centre & Bodyworks",
+    description: "Learn how Shine Auto Centre (Shine Auto Bodyworks LTD) protects your personal information and vehicle data under UK GDPR.",
+    url: `${siteUrl}/privacy-policy`,
+    siteName: "Shine Auto Centre",
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Shine Auto Centre & Bodyworks",
+    description: "Learn how Shine Auto Centre (Shine Auto Bodyworks LTD) protects your personal information and vehicle data under UK GDPR.",
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -15,7 +33,7 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue-glow">Legal Policy</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-amber">Legal Policy</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
             Privacy Policy
           </h1>
@@ -48,43 +66,39 @@ export default function PrivacyPolicyPage() {
             <p>We process your personal information strictly for legitimate business purposes:</p>
             <ul className="list-disc list-inside mt-2 space-y-1 text-slate-400">
               <li>Formulating accurate parts and labor estimates for your vehicle repair.</li>
-              <li>Contacting you via telephone, SMS, or WhatsApp regarding your requested quotation.</li>
-              <li>Scheduling workshop appointments and servicing bookings at our Stanwell facility.</li>
-              <li>Complying with statutory accounting and legal obligations.</li>
+              <li>Contacting you via WhatsApp, SMS, phone, or email regarding your booking.</li>
+              <li>Ordering correct paint codes, OEM or aftermarket panels, and mechanical components.</li>
+              <li>Maintaining warranty and repair records.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">4. Data Sharing &amp; Third Parties</h2>
+            <h2 className="text-lg font-bold text-white mb-2">4. Third-Party Disclosures</h2>
             <p>
-              We do <strong>not</strong> sell, rent, or trade your personal information to third-party advertisers. Data is only shared where necessary to service your vehicle (such as ordering specialist manufacturer parts with approved UK automotive distributors) or where required by law.
+              We do not sell, rent, or trade your personal information. Data may be shared only with vetted sub-processors essential to garage operations (such as WhatsApp Business API for customer messaging and cloud hosting infrastructure).
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-bold text-white mb-2">5. Data Retention &amp; Security</h2>
             <p>
-              We apply technical and organisational measures to protect your personal details against unauthorised access, alteration, or loss. Quote requests are retained only as long as necessary to facilitate your repair booking and satisfy legal requirements.
+              Repair intake records and damage photographs are retained for a maximum of 3 years following job completion for warranty validation and insurance recordkeeping, after which they are securely deleted.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-bold text-white mb-2">6. Your Rights</h2>
             <p>
-              Under UK data protection law, you have the right to request access to your personal information, request corrections to inaccurate records, request deletion of your data, or object to processing. To exercise any of these rights, contact our Data Protection Officer at {BUSINESS_CONFIG.email}.
+              Under UK GDPR, you have the right to request access to, rectification of, or erasure of your personal data held by {BUSINESS_CONFIG.legalName}. To exercise these rights, please contact our data controller at <a href={`mailto:${BUSINESS_CONFIG.email}`} className="text-brand-amber underline">{BUSINESS_CONFIG.email}</a>.
             </p>
           </section>
 
-          <section className="pt-4 border-t border-surface-border">
-            <h2 className="text-lg font-bold text-white mb-2">7. Contact Details</h2>
-            <p>For any questions or privacy enquiries, please write to us at:</p>
-            <div className="mt-3 p-4 bg-surface-raised rounded-xl border border-surface-border text-xs space-y-1">
-              <p><strong>{BUSINESS_CONFIG.legalName}</strong></p>
-              <p>{BUSINESS_CONFIG.address.full}</p>
-              <p>Email: <a href={`mailto:${BUSINESS_CONFIG.email}`} className="text-brand-blue-glow hover:underline">{BUSINESS_CONFIG.email}</a></p>
-              <p>Telephone: {BUSINESS_CONFIG.phoneLandline}</p>
-            </div>
-          </section>
+          <div className="pt-6 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <span>Trading as {BUSINESS_CONFIG.name}</span>
+            <Link href="/" className="text-brand-amber font-semibold hover:underline">
+              Return to Homepage →
+            </Link>
+          </div>
 
         </div>
 

@@ -382,7 +382,7 @@ export function QuoteWizard() {
               autoComplete="email"
               value={formData.email}
               onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
-              placeholder="e.g. name@example.com"
+              placeholder="e.g. name@domain.co.uk"
               className="w-full bg-surface-raised border border-surface-border rounded-xl px-4 py-3.5 text-base text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-blue-glow"
             />
           </div>

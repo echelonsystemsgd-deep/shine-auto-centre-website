@@ -17,7 +17,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-background border border-surface-border p-1">
                 <Image
-                  src="/images/brand/logo.png"
+                  src="/images/brand/logo-clean.png"
                   alt="Shine Auto Centre Logo"
                   width={40}
                   height={40}

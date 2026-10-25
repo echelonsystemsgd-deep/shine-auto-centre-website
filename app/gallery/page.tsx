@@ -1,14 +1,41 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { BeforeAfterSlider } from "@/components/home/BeforeAfterSlider";
 import { WhatHappensNext } from "@/components/home/WhatHappensNext";
 import { ClosingCta } from "@/components/home/ClosingCta";
-import { Sparkles, ShieldCheck, ChevronRight } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+import { getSiteUrl } from "@/lib/business";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Before & After Car Bodywork Repairs Gallery in Ashford",
-  description: "View authentic before and after collision repairs, dent removals, bumper welds, and spray finishes completed at Shine Auto Centre in Stanwell, Ashford.",
+  title: "Before & After Car Repairs Gallery | Ashford Bodyshop",
+  description: "View authentic before and after accident repairs, dent removals, bumper welds, and spray finishes completed at Shine Auto Centre in Stanwell, Ashford.",
+  alternates: {
+    canonical: `${siteUrl}/gallery`,
+  },
+  openGraph: {
+    title: "Before & After Car Repairs Gallery | Shine Auto Centre Ashford",
+    description: "Authentic before and after damage restoration photos from our Stanwell workshop. Inspect real respray and dent repairs.",
+    url: `${siteUrl}/gallery`,
+    siteName: "Shine Auto Centre",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: `${siteUrl}/api/og?title=Before%20%26%20After%20Repair%20Gallery&subtitle=Real%20Bodyshop%20Restorations%20in%20Stanwell%20%26%20Ashford`,
+        width: 1200,
+        height: 630,
+        alt: "Shine Auto Centre Before & After Gallery",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Before & After Car Repairs Gallery | Shine Auto Centre Ashford",
+    description: "Authentic before and after damage restoration photos from our Stanwell workshop. Inspect real respray and dent repairs.",
+    images: [`${siteUrl}/api/og?title=Before%20%26%20After%20Repair%20Gallery&subtitle=Real%20Bodyshop%20Restorations%20in%20Stanwell%20%26%20Ashford`],
+  },
 };
 
 export default function GalleryPage() {
@@ -18,7 +45,7 @@ export default function GalleryPage() {
       {/* Header */}
       <section className="py-12 sm:py-20 border-b border-surface-border bg-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue-glow">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-amber">
             Authentic Workshop Repairs
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-2">
@@ -40,7 +67,7 @@ export default function GalleryPage() {
       {/* Trust Notice */}
       <section className="py-12 bg-surface/50 border-b border-surface-border">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 p-3 bg-brand-blue/10 border border-brand-blue/20 rounded-2xl text-xs text-slate-300">
+          <div className="inline-flex items-center gap-2 p-3 bg-brand-amber/10 border border-brand-amber/25 rounded-2xl text-xs text-slate-300">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>
               <strong>Authenticity guarantee:</strong> Every example displayed is an unedited photographic record of repairs performed at our Stanwell workshop.
@@ -49,14 +76,11 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* What Happens Next Strip */}
+      {/* What happens next roadmap */}
       <WhatHappensNext />
 
-      {/* Closing CTA */}
-      <ClosingCta
-        headline="Have damage similar to one of these cases?"
-        subline="Send us a photo on WhatsApp or fill out our quick form for an estimate in under 2 hours."
-      />
+      {/* Global Closing CTA */}
+      <ClosingCta />
 
     </div>
   );

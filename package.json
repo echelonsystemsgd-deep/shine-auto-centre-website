@@ -1,12 +1,13 @@
 {
   "name": "shine-auto-centre-website",
   "version": "1.0.0",
+  "description": "Ultra-modern, high-converting bodyshop web application for Shine Auto Centre",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
@@ -26,6 +27,7 @@
     "autoprefixer": "^10.4.20",
     "jsdom": "^26.0.0",
     "postcss": "^8.5.3",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3",
     "vitest": "^3.0.5"

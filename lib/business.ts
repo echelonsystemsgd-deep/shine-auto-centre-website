@@ -27,11 +27,26 @@ export interface UkVehicleSpec {
   fuel?: string;
 }
 
+export const getSiteUrl = (): string => {
+  if (typeof process !== "undefined" && process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/+$/, "");
+  }
+  return "https://www.shineauto.co.uk";
+};
+
+export const isPrototypeMode = (): boolean => {
+  if (typeof process !== "undefined" && process.env.NEXT_PUBLIC_PROTOTYPE_MODE !== undefined) {
+    return process.env.NEXT_PUBLIC_PROTOTYPE_MODE !== "false";
+  }
+  return true; // Default to prototype mode until launch
+};
+
 export const BUSINESS_CONFIG = {
   // Brand & Legal
   name: "Shine Auto Centre",
   legalName: "Shine Auto Bodyworks LTD",
   companyNumber: "TODO: Client to confirm", // Intentionally marked TODO as requested
+  sameAs: [] as string[], // TODO: owner to confirm official social profiles (e.g. Facebook, Instagram)
 
   // Trust & Ratings
   rating: {
@@ -78,7 +93,7 @@ export const BUSINESS_CONFIG = {
   responseClaimFull: "We usually respond in under 2 hours during working hours (Mon to Sat, 9 to 6). Outside those hours we'll reply when we open.",
 
   // Feature Flags
-  prototypeMode: true,
+  prototypeMode: isPrototypeMode(),
   enableFormSubmission: false, // Disabled by default for prototype mode
 } as const;
 

@@ -1,12 +1,30 @@
 import React from "react";
 import type { Metadata } from "next";
-import { BUSINESS_CONFIG } from "@/lib/business";
+import { BUSINESS_CONFIG, getSiteUrl } from "@/lib/business";
 import Link from "next/link";
 import { Cookie, ShieldCheck } from "lucide-react";
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  title: "Cookie Policy | Shine Auto Centre Ashford",
-  description: "Cookie policy for Shine Auto Centre. Learn how cookies and local browser storage are used on our website prototype.",
+  title: "Cookie Policy | Shine Auto Centre, Stanwell",
+  description: "Cookie policy for Shine Auto Centre website prototype. Details on essential local storage and cookie usage for estimating car repairs.",
+  alternates: {
+    canonical: `${siteUrl}/cookies`,
+  },
+  openGraph: {
+    title: "Cookie Policy | Shine Auto Centre Ashford",
+    description: "Learn how Shine Auto Centre uses strictly essential session storage with zero third-party advertising cookies.",
+    url: `${siteUrl}/cookies`,
+    siteName: "Shine Auto Centre",
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cookie Policy | Shine Auto Centre Ashford",
+    description: "Learn how Shine Auto Centre uses strictly essential session storage with zero third-party advertising cookies.",
+  },
 };
 
 export default function CookiesPage() {
@@ -15,7 +33,7 @@ export default function CookiesPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue-glow">Compliance</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-amber">Compliance</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
             Cookie Policy
           </h1>
@@ -48,18 +66,18 @@ export default function CookiesPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">4. How to Control Cookies</h2>
+            <h2 className="text-lg font-bold text-white mb-2">4. Managing Browser Cookies</h2>
             <p>
-              You can instruct your web browser to delete or refuse cookies by adjusting your browser settings (Chrome, Safari, Edge, Firefox). Please note that disabling essential cookies may impact interactive features such as the 3-step quote form.
+              You can control or disable cookies through your browser settings. However, disabling all cookies may prevent the repair wizard from functioning smoothly during your session.
             </p>
           </section>
 
-          <section className="pt-4 border-t border-surface-border">
-            <h2 className="text-lg font-bold text-white mb-2">5. Contact Us</h2>
-            <p>
-              If you have questions regarding our use of cookies, contact us at <a href={`mailto:${BUSINESS_CONFIG.email}`} className="text-brand-blue-glow hover:underline">{BUSINESS_CONFIG.email}</a>.
-            </p>
-          </section>
+          <div className="pt-6 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <span>Trading as {BUSINESS_CONFIG.name}</span>
+            <Link href="/" className="text-brand-amber font-semibold hover:underline">
+              Return to Homepage →
+            </Link>
+          </div>
 
         </div>
 

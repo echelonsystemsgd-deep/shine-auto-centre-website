@@ -3,12 +3,39 @@ import type { Metadata } from "next";
 import { FaqAccordion } from "@/components/faq/FaqAccordion";
 import { WhatHappensNext } from "@/components/home/WhatHappensNext";
 import { ClosingCta } from "@/components/home/ClosingCta";
-import { FAQS, BUSINESS_CONFIG } from "@/lib/business";
-import { MessageCircle, Phone, HelpCircle } from "lucide-react";
+import { FAQS, BUSINESS_CONFIG, getSiteUrl } from "@/lib/business";
+import { PhoneIcon, WhatsAppIcon } from "@/components/icons/BrandIcons";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Car Repairs in Ashford",
-  description: "Read answers to common questions about Shine Auto Centre repair quotes, 2-hour response claims, color matching, walk-ins, and opening hours.",
+  description: "Answers to common questions about Shine Auto Centre repair quotes, 2-hour response claims, color matching, walk-ins, and opening hours in Stanwell.",
+  alternates: {
+    canonical: `${siteUrl}/faq`,
+  },
+  openGraph: {
+    title: "Frequently Asked Questions | Shine Auto Centre Ashford",
+    description: "Read answers about repair estimates, paint matching, repair turnarounds, and our Stanwell workshop opening hours.",
+    url: `${siteUrl}/faq`,
+    siteName: "Shine Auto Centre",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: `${siteUrl}/api/og?title=Frequently%20Asked%20Questions&subtitle=Workshop%20Quotes%2C%20Turnaround%20Times%20%26%20Paint%20Guarantees`,
+        width: 1200,
+        height: 630,
+        alt: "Shine Auto Centre FAQs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frequently Asked Questions | Shine Auto Centre Ashford",
+    description: "Read answers about repair estimates, paint matching, repair turnarounds, and our Stanwell workshop opening hours.",
+    images: [`${siteUrl}/api/og?title=Frequently%20Asked%20Questions&subtitle=Workshop%20Quotes%2C%20Turnaround%20Times%20%26%20Paint%20Guarantees`],
+  },
 };
 
 export default function FaqPage() {
@@ -36,7 +63,7 @@ export default function FaqPage() {
       {/* Header */}
       <section className="py-12 sm:py-20 border-b border-surface-border bg-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue-glow">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-amber">
             Help &amp; Practical Information
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-2">
@@ -59,33 +86,32 @@ export default function FaqPage() {
             <p className="text-xs text-slate-300 mb-4">
               Our workshop team is available Monday to Saturday, 9am to 6pm to answer any queries.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={`tel:${BUSINESS_CONFIG.phoneLandlineRaw}`}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface hover:bg-surface-border text-white text-xs font-bold px-4 py-2.5 rounded-xl border border-surface-border transition-colors min-h-[44px]"
+              >
+                <PhoneIcon className="w-4 h-4 text-brand-amber" />
+                <span>Call {BUSINESS_CONFIG.phoneLandline}</span>
+              </a>
               <a
                 href={BUSINESS_CONFIG.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors min-h-[44px]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:brightness-110 text-slate-950 text-xs font-bold px-4 py-2.5 rounded-xl transition-all min-h-[44px]"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Message on WhatsApp</span>
-              </a>
-              <a
-                href={`tel:${BUSINESS_CONFIG.phoneLandlineRaw}`}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface border border-surface-border hover:border-brand-blue text-slate-200 text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors min-h-[44px]"
-              >
-                <Phone className="w-4 h-4 text-brand-blue-light" />
-                <span>Call {BUSINESS_CONFIG.phoneLandline}</span>
+                <WhatsAppIcon className="w-4 h-4 text-slate-950" />
+                <span>WhatsApp Workshop</span>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Happens Next */}
+      {/* What happens next roadmap */}
       <WhatHappensNext />
 
-      {/* Closing CTA */}
+      {/* Bottom CTA */}
       <ClosingCta />
 
     </div>

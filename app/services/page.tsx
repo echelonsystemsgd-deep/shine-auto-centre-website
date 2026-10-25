@@ -2,14 +2,42 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ArrowRight, CheckCircle2, Wrench, Sparkles } from "lucide-react";
-import { SERVICES } from "@/lib/business";
+import { ChevronRight, ArrowRight, CheckCircle2 } from "lucide-react";
+import { SERVICES, getSiteUrl } from "@/lib/business";
+import { ServiceIcon } from "@/components/icons/BrandIcons";
 import { WhatHappensNext } from "@/components/home/WhatHappensNext";
 import { ClosingCta } from "@/components/home/ClosingCta";
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  title: "Car Bodywork & Mechanical Repair Services in Ashford",
-  description: "Explore Shine Auto Centre's repair services in Stanwell, Ashford: accident repairs, dent and scratch removal, bumper welding, paint resprays, alloy refurbs, and servicing.",
+  title: "Car Bodywork & Mechanical Repairs | Stanwell & Ashford",
+  description: "Explore expert accident repairs, dent removal, bumper welding, panel resprays, alloy refurbs, and car servicing at Shine Auto Centre in Stanwell TW15 3AE.",
+  alternates: {
+    canonical: `${siteUrl}/services`,
+  },
+  openGraph: {
+    title: "Car Bodywork & Mechanical Repairs | Shine Auto Centre",
+    description: "Accident repairs, dent removal, bumper welding, panel resprays, alloy wheel refurbs, and diagnostics in Stanwell & Ashford.",
+    url: `${siteUrl}/services`,
+    siteName: "Shine Auto Centre",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: `${siteUrl}/api/og?title=Bodyshop%20%26%20Mechanical%20Services&subtitle=Stanwell%20%26%20Ashford%20TW15%203AE%20%E2%80%A2%20Fast%202-Hour%20Quotes`,
+        width: 1200,
+        height: 630,
+        alt: "Shine Auto Centre Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Bodywork & Mechanical Repairs | Shine Auto Centre",
+    description: "Accident repairs, dent removal, bumper welding, panel resprays, alloy wheel refurbs, and diagnostics in Stanwell & Ashford.",
+    images: [`${siteUrl}/api/og?title=Bodyshop%20%26%20Mechanical%20Services&subtitle=Stanwell%20%26%20Ashford%20TW15%203AE%20%E2%80%A2%20Fast%202-Hour%20Quotes`],
+  },
 };
 
 export default function ServicesPage() {
@@ -22,7 +50,7 @@ export default function ServicesPage() {
       {/* Services Header */}
       <section className="py-12 sm:py-20 border-b border-surface-border bg-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-blue-glow">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-amber">
             Ashford &amp; Stanwell Workshop
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-2">
@@ -39,7 +67,6 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex items-center gap-2 mb-8">
-            <Sparkles className="w-5 h-5 text-brand-blue-light" />
             <h2 className="text-2xl font-bold text-white tracking-tight">
               Bodywork &amp; Cosmetic Repairs
             </h2>
@@ -49,7 +76,7 @@ export default function ServicesPage() {
             {bodyworkServices.map((service) => (
               <div
                 key={service.slug}
-                className="bg-surface border border-surface-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-blue/50 transition-all shadow-sm"
+                className="bg-surface border border-surface-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-amber/50 transition-all shadow-sm group"
               >
                 <div>
                   <div className="relative aspect-[16/10] w-full bg-slate-900">
@@ -57,13 +84,21 @@ export default function ServicesPage() {
                       src={service.image}
                       alt={service.altText}
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-brand-amber/10 border border-brand-amber/25 flex items-center justify-center text-brand-amber shrink-0">
+                        <ServiceIcon slug={service.slug} className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-brand-amber transition-colors">
+                        {service.title}
+                      </h3>
+                    </div>
+
                     <p className="text-xs text-slate-300 leading-relaxed mb-4">
                       {service.shortDescription}
                     </p>
@@ -90,7 +125,7 @@ export default function ServicesPage() {
 
                   <Link
                     href={`/quote?service=${service.slug}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold bg-brand-blue/20 hover:bg-brand-blue text-brand-blue-glow hover:text-white px-3 py-1.5 rounded-lg border border-brand-blue/40 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold bg-brand-amber/15 hover:bg-brand-amber text-brand-amber hover:text-slate-950 px-3 py-1.5 rounded-lg border border-brand-amber/30 transition-colors"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -108,7 +143,6 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex items-center gap-2 mb-8">
-            <Wrench className="w-5 h-5 text-brand-blue-light" />
             <h2 className="text-2xl font-bold text-white tracking-tight">
               Mechanical &amp; Maintenance Repairs
             </h2>
@@ -118,27 +152,35 @@ export default function ServicesPage() {
             {mechanicalServices.map((service) => (
               <div
                 key={service.slug}
-                className="bg-surface border border-surface-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-blue/50 transition-all shadow-sm"
+                className="bg-surface border border-surface-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-amber/50 transition-all shadow-sm group"
               >
                 <div>
-                  <div className="relative aspect-[16/9] w-full bg-slate-900">
+                  <div className="relative aspect-[16/10] w-full bg-slate-900">
                     <Image
                       src={service.image}
                       alt={service.altText}
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-brand-amber/10 border border-brand-amber/25 flex items-center justify-center text-brand-amber shrink-0">
+                        <ServiceIcon slug={service.slug} className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-brand-amber transition-colors">
+                        {service.title}
+                      </h3>
+                    </div>
+
                     <p className="text-xs text-slate-300 leading-relaxed mb-4">
                       {service.shortDescription}
                     </p>
 
-                    <div className="space-y-2 mb-4">
-                      {service.whatWeDo.map((item, i) => (
+                    <div className="space-y-1.5 mb-4">
+                      {service.whatWeDo.slice(0, 3).map((item, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs text-slate-400">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                           <span>{item}</span>
@@ -153,13 +195,13 @@ export default function ServicesPage() {
                     href={`/services/${service.slug}`}
                     className="text-xs font-bold text-slate-300 hover:text-white flex items-center gap-1"
                   >
-                    <span>Read Details</span>
+                    <span>Read Guide</span>
                     <ChevronRight className="w-3.5 h-3.5" />
                   </Link>
 
                   <Link
                     href={`/quote?service=${service.slug}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold bg-brand-blue/20 hover:bg-brand-blue text-brand-blue-glow hover:text-white px-3 py-1.5 rounded-lg border border-brand-blue/40 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold bg-brand-amber/15 hover:bg-brand-amber text-brand-amber hover:text-slate-950 px-3 py-1.5 rounded-lg border border-brand-amber/30 transition-colors"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -172,10 +214,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* What Happens Next Strip */}
+      {/* Workflow roadmap */}
       <WhatHappensNext />
 
-      {/* Closing CTA */}
+      {/* Bottom CTA */}
       <ClosingCta />
 
     </div>
