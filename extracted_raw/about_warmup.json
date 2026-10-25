@@ -1,0 +1,617 @@
+{
+  "platform": {
+    "ssrPropsUpdates": [],
+    "ssrStyleUpdates": [],
+    "ssrStructureUpdates": []
+  },
+  "pages": {
+    "compIdToTypeMap": {
+      "masterPage": "MasterPage",
+      "BACKGROUND_GROUP": "BackgroundGroup",
+      "SCROLL_TO_TOP": "Anchor",
+      "SCROLL_TO_BOTTOM": "Anchor",
+      "SKIP_TO_CONTENT_BTN": "SkipToContentButton",
+      "SITE_PAGES": "PageGroup",
+      "SITE_HEADER": "HeaderContainer",
+      "SITE_FOOTER": "FooterContainer",
+      "PAGES_CONTAINER": "PagesContainer",
+      "hy02p": "Page",
+      "Containerhy02p": "ResponsiveContainer",
+      "comp-lzp6pfcz": "RefComponent",
+      "comp-lzp6pfcz_r_comp-kbgajy18": "HeaderSection",
+      "comp-lzp6pfcz_r_comp-kbgajy18_relative": "ResponsiveContainer",
+      "comp-lzp6pfcz_r_comp-lzgv4vy9": "Container",
+      "comp-lzp6pfcz_r_comp-lzgv4vy9_relative": "ResponsiveContainer",
+      "comp-lzp6pfcz_r_comp-lzgvjm59": "WRichText",
+      "comp-lzp6pfcz_r_comp-lzgv4waf": "Container",
+      "comp-lzp6pfcz_r_comp-lzgv4waf_relative": "ResponsiveContainer",
+      "comp-lzp6pfcz_r_comp-lzgv89i7": "HamburgerMenuRoot",
+      "comp-lzp6pfcz_r_comp-lzgv89ih": "HamburgerOpenButton",
+      "comp-lzp6pfcz_r_comp-lzgv89im": "HamburgerOverlay",
+      "comp-lzp6pfcz_r_comp-lzgv89ip2": "HamburgerMenuContainer",
+      "comp-lzp6pfcz_r_comp-lzgv89it": "HamburgerCloseButton",
+      "comp-lzp6pfcz_r_comp-lzgv89j53": "ExpandableMenu",
+      "PAGE_SECTIONShy02p": "PageSections",
+      "comp-lzp6qjx3": "Section",
+      "comp-lzp6qjx3_relative": "ResponsiveContainer",
+      "comp-lzp6ra0q": "Container",
+      "comp-lzp6ra0q_relative": "ResponsiveContainer",
+      "comp-lzp6tg9k": "WRichText",
+      "comp-lzp6ygca": "Section",
+      "comp-lzp6ygca_relative": "ResponsiveContainer",
+      "comp-m4657281": "Container",
+      "comp-m4657281_relative": "ResponsiveContainer",
+      "comp-m46581qq": "AccordionContainer",
+      "comp-m46581qt": "AccordionItem",
+      "comp-m46581qu": "WRichText",
+      "comp-m46581qv3": "AccordionItem",
+      "comp-m46581qx3": "WRichText",
+      "comp-m46581qy8": "AccordionItem",
+      "comp-m46581qz1": "WRichText",
+      "comp-m46581qz10": "AccordionItem",
+      "comp-m46581r03": "WRichText",
+      "comp-lzp78yiv": "Container",
+      "comp-lzp78yiv_relative": "ResponsiveContainer",
+      "comp-m464xv2v": "WRichText",
+      "comp-lzp6pfeu3": "Section",
+      "comp-lzp6pfeu3_relative": "ResponsiveContainer",
+      "comp-lzp6pfex": "Container",
+      "comp-lzp6pfex_relative": "ResponsiveContainer",
+      "comp-lzp6pfez": "WRichText",
+      "comp-lzp6pff38": "Container",
+      "comp-lzp6pff38_relative": "ResponsiveContainer",
+      "comp-lzp6pff6": "Repeater",
+      "comp-lzp6pffa": "Container",
+      "comp-lzp6pffa_relative": "ResponsiveContainer",
+      "comp-lzp6pffc4": "Container",
+      "comp-lzp6pffc4_relative": "ResponsiveContainer",
+      "comp-lzp6pfff": "WRichText",
+      "comp-lzp6pffh7": "ImageX",
+      "comp-lzp6pffs7": "WRichText",
+      "comp-lzp6pfgn4": "Section",
+      "comp-lzp6pfgn4_relative": "ResponsiveContainer",
+      "comp-m39jwasy": "Container",
+      "comp-m39jwasy_relative": "ResponsiveContainer",
+      "comp-m39jwsod": "tpaWidgetNative",
+      "comp-m39jsly9": "Container",
+      "comp-m39jsly9_relative": "ResponsiveContainer",
+      "comp-m39jyr6z": "WRichText",
+      "comp-m3aadl47": "Section",
+      "comp-m3aadl47_relative": "ResponsiveContainer",
+      "comp-m3aadl4f": "Container",
+      "comp-m3aadl4f_relative": "ResponsiveContainer",
+      "comp-m3aadl4g": "WRichText",
+      "comp-m3aadvpd": "Container",
+      "comp-m3aadvpd_relative": "ResponsiveContainer",
+      "comp-m465reeq": "Section",
+      "comp-m465reeq_relative": "ResponsiveContainer",
+      "comp-m465refb": "Container",
+      "comp-m465refb_relative": "ResponsiveContainer",
+      "comp-m465refd1": "AccordionContainer",
+      "comp-m465reff11": "AccordionItem",
+      "comp-m465refh3": "WRichText",
+      "comp-m465refj4": "AccordionItem",
+      "comp-m465refk6": "WRichText",
+      "comp-m465refl": "AccordionItem",
+      "comp-m465refl7": "WRichText",
+      "comp-m465refm6": "AccordionItem",
+      "comp-m465refn2": "WRichText",
+      "comp-m465refo": "Container",
+      "comp-m465refo_relative": "ResponsiveContainer",
+      "comp-m465refp8": "WRichText",
+      "comp-m465yj36": "Section",
+      "comp-m465yj36_relative": "ResponsiveContainer",
+      "comp-m465yj3g": "Container",
+      "comp-m465yj3g_relative": "ResponsiveContainer",
+      "comp-m465yj3h4": "AccordionContainer",
+      "comp-m465yj3i11": "AccordionItem",
+      "comp-m465yj3j2": "WRichText",
+      "comp-m465yj3k1": "AccordionItem",
+      "comp-m465yj3k8": "WRichText",
+      "comp-m465yj3l4": "AccordionItem",
+      "comp-m465yj3l11": "WRichText",
+      "comp-m465yj3m3": "AccordionItem",
+      "comp-m465yj3p": "WRichText",
+      "comp-m465yj3q": "Container",
+      "comp-m465yj3q_relative": "ResponsiveContainer",
+      "comp-m465yj3r": "WRichText",
+      "comp-m4661cf1": "Section",
+      "comp-m4661cf1_relative": "ResponsiveContainer",
+      "comp-m4661cfd": "Container",
+      "comp-m4661cfd_relative": "ResponsiveContainer",
+      "comp-m4661cfe2": "AccordionContainer",
+      "comp-m4661cff12": "AccordionItem",
+      "comp-m4661cfg5": "WRichText",
+      "comp-m4661cfh4": "AccordionItem",
+      "comp-m4661cfi": "WRichText",
+      "comp-m4661cfi7": "AccordionItem",
+      "comp-m4661cfj": "WRichText",
+      "comp-m4661cfj7": "AccordionItem",
+      "comp-m4661cfk": "WRichText",
+      "comp-m4661cfk8": "Container",
+      "comp-m4661cfk8_relative": "ResponsiveContainer",
+      "comp-m4661cfl10": "WRichText",
+      "comp-m4663asx": "Section",
+      "comp-m4663asx_relative": "ResponsiveContainer",
+      "comp-m4663ata": "Container",
+      "comp-m4663ata_relative": "ResponsiveContainer",
+      "comp-m4663atb1": "AccordionContainer",
+      "comp-m4663atc8": "AccordionItem",
+      "comp-m4663atd1": "WRichText",
+      "comp-m4663atd8": "AccordionItem",
+      "comp-m4663ate6": "WRichText",
+      "comp-m4663atf1": "AccordionItem",
+      "comp-m4663atf8": "WRichText",
+      "comp-m4663atg4": "AccordionItem",
+      "comp-m4663ath4": "WRichText",
+      "comp-m4663ati1": "Container",
+      "comp-m4663ati1_relative": "ResponsiveContainer",
+      "comp-m4663atj2": "WRichText",
+      "comp-lzp6pfj47": "RefComponent",
+      "comp-lzp6pfj47_r_comp-kbgakgyt": "FooterSection",
+      "comp-lzp6pfj47_r_comp-kbgakgyt_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-lzi5af0s": "Container",
+      "comp-lzp6pfj47_r_comp-lzi5af0s_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-lzi5cvjp": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzi5afa9": "Container",
+      "comp-lzp6pfj47_r_comp-lzi5afa9_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-lzl3d00s": "Container",
+      "comp-lzp6pfj47_r_comp-lzl3d00s_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-lzi5g5kf": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzl393tr": "WRichText",
+      "comp-lzp6pfj47_r_comp-m098o3yz": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzi5ape2": "Container",
+      "comp-lzp6pfj47_r_comp-lzi5ape2_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-lzs7qkft": "Container",
+      "comp-lzp6pfj47_r_comp-lzs7qkft_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-lzi5jddx": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzs7cdnk": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzs7ijnf": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzs7jlzf": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzs7nbsk": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzs7o6rs": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzs7ozz8": "WRichText",
+      "comp-lzp6pfj47_r_comp-lzi5al3g": "Container",
+      "comp-lzp6pfj47_r_comp-lzi5al3g_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-m38yyi6c": "ImageX",
+      "comp-lzp6pfj47_r_comp-lzs7wv5o": "GhostComp",
+      "comp-lzp6pfj47_r_comp-lzi5afja": "Container",
+      "comp-lzp6pfj47_r_comp-lzi5afja_relative": "ResponsiveContainer",
+      "comp-lzp6pfj47_r_comp-kd5pdf7t": "WRichText",
+      "comp-lzp6pfj6-pinned-layer": "PinnedLayer",
+      "comp-lzp6pfj6": "RefComponent",
+      "comp-lzp6pfj6_r_comp-kd5px9hr": "MenuContainer",
+      "comp-lzp6pfj6_r_comp-kd5px9kk": "ExpandableMenu",
+      "comp-lzp6pfj6_r_comp-kkmqi5tc": "VectorImage",
+      "DYNAMIC_STRUCTURE_CONTAINER": "DynamicStructureContainer",
+      "site-root": "DivWithChildren",
+      "main_MF": "DivWithChildren",
+      "hy02p_wrapper": "PageMountUnmount"
+    }
+  },
+  "appsWarmupData": {
+    "14271d6f-ba62-d045-549b-ab972ae1f70e": {
+      "comp-m39jwsod_appSettings": {
+        "pageId": "d34uk",
+        "styleId": "style-jyem87tx",
+        "upgrades": {
+          "fullscreen": {
+            "date": "Tue Dec 11 2018 18:15:52 GMT+0300 (Москва, стандартное время)"
+          }
+        },
+        "layoutTeaserShowed": true,
+        "galleryId": "2f92d3fb-b7c5-4219-8233-1c68f5f7831a",
+        "originGallerySettings": null
+      },
+      "comp-m39jwsod_galleryData": {
+        "items": [
+          {
+            "itemId": "3b9ce9a3-143b-46b6-aa20-3664400b08fa",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": -287258,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 1349,
+              "width": 2397,
+              "fileName": "pexels-yaroslav-shuraev-1553961_edit.jpg",
+              "name": "8bb438_dbc34d8b0df546e3b720b14ff670ba83~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_dbc34d8b0df546e3b720b14ff670ba83~mv2.jpg"
+          },
+          {
+            "itemId": "566828cd-8fb1-417a-9f5f-dfb4bf4ca10b",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 844792578030.5,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 3751,
+              "width": 2501,
+              "fileName": "mathilde-langevin-6fz3ajqj88c-unsplash_edit.jpg",
+              "name": "8bb438_f2d393d3ad61468890a2616c56fff0f5~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_f2d393d3ad61468890a2616c56fff0f5~mv2.jpg"
+          },
+          {
+            "itemId": "f08384fe-98e2-4780-ab0e-9503ae57915f",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1267189010674.75,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 5862,
+              "width": 5685,
+              "fileName": "florian-krumm-Fudi5uf5-m8-unsplash_edit.jpg",
+              "name": "8bb438_e83d8cc28a044555b7672018983789a7~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_e83d8cc28a044555b7672018983789a7~mv2.jpg"
+          },
+          {
+            "itemId": "14e3b350-dabe-4ce7-88c2-e47b8007279f",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1478387226996.875,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 933,
+              "width": 623,
+              "focalPoint": [
+                0.5,
+                0.5
+              ],
+              "fileName": "0_1 (6).jpg",
+              "name": "8bb438_22ae62c08916403d955425d5e8c70a11~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_22ae62c08916403d955425d5e8c70a11~mv2.jpg"
+          },
+          {
+            "itemId": "c9107dff-658d-42e7-b7ad-613ac2b9dd47",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1583986335157.9375,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 4761,
+              "width": 3174,
+              "fileName": "the-blowup-X5gIdTDxkYU-unsplash_edit.jpg",
+              "name": "8bb438_189ac9d807b640ffbeca24c41d965bae~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_189ac9d807b640ffbeca24c41d965bae~mv2.jpg"
+          },
+          {
+            "itemId": "0e609516-3d3b-4d78-ab96-743e6b972746",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1636785889238.4688,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 3515,
+              "width": 2344,
+              "fileName": "arctic-qu-Yn7NXC5SFQo-unsplash_edit.jpg",
+              "name": "8bb438_02133a81229f49e09dc4c20f107f1eb6~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_02133a81229f49e09dc4c20f107f1eb6~mv2.jpg"
+          },
+          {
+            "itemId": "48743bdc-ebcf-467a-ab27-8e74cb5f9fda",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1663185666278.7344,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 1713,
+              "width": 1142,
+              "fileName": "martin-jursitzka-5NSLhET_jmw-unsplash (1).png",
+              "name": "8bb438_f7a5e921e855433896901546de91b43e~mv2.png"
+            },
+            "mediaUrl": "8bb438_f7a5e921e855433896901546de91b43e~mv2.png"
+          },
+          {
+            "itemId": "3e18c638-4f21-458e-b5ad-76c3f5df3747",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1676385554798.8672,
+            "metaData": {
+              "description": "Describe your video here",
+              "title": "Video Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "type": "video",
+              "customPoster": "",
+              "isExternal": false,
+              "height": 1080,
+              "width": 1920,
+              "name": "pexels-arthouse-studio-5091109-1920x1080-50fps.mp4",
+              "posters": [
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_927f3e749a784536afbcdd81890e8064f000.jpg"
+                },
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_927f3e749a784536afbcdd81890e8064f001.jpg"
+                },
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_927f3e749a784536afbcdd81890e8064f002.jpg"
+                },
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_927f3e749a784536afbcdd81890e8064f003.jpg"
+                }
+              ],
+              "qualities": [
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 1080,
+                  "quality": "1080p",
+                  "width": 1920
+                },
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 720,
+                  "quality": "720p",
+                  "width": 1280
+                },
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 480,
+                  "quality": "480p",
+                  "width": 854
+                },
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 360,
+                  "quality": "360p",
+                  "width": 640
+                }
+              ],
+              "duration": 20600
+            },
+            "mediaUrl": "8bb438_927f3e749a784536afbcdd81890e8064"
+          },
+          {
+            "itemId": "e66346c9-081d-4118-b95d-2649517272de",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1682985499058.9336,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 6000,
+              "width": 4000,
+              "fileName": "almas-salakhov-r6tBVNU-mx4-unsplash_edit.jpg",
+              "name": "8bb438_31254b5ad37446c8949144e34adc2113~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_31254b5ad37446c8949144e34adc2113~mv2.jpg"
+          },
+          {
+            "itemId": "ff427b5e-8725-4d86-accd-1b4fd8331eeb",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1689585443319,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 5255,
+              "width": 3503,
+              "fileName": "philippe-gauthier-KQsU_tQDH9k-unsplash_edit.jpg",
+              "name": "8bb438_c9e1a83e7f7b43799dbe5a8d3fd81f0b~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_c9e1a83e7f7b43799dbe5a8d3fd81f0b~mv2.jpg"
+          },
+          {
+            "itemId": "0d54fa61-2265-46a7-bfe0-5bdd7418c4a6",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1689585444021,
+            "metaData": {
+              "description": "Describe your image here",
+              "title": "Image Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "alt": "",
+              "sourceName": "private",
+              "tags": [
+                "_fileOrigin_uploaded"
+              ],
+              "height": 4405,
+              "width": 4271,
+              "fileName": "0220 (2).jpg",
+              "name": "8bb438_324d1f8b463e45d891b5de00c83989ad~mv2.jpg"
+            },
+            "mediaUrl": "8bb438_324d1f8b463e45d891b5de00c83989ad~mv2.jpg"
+          },
+          {
+            "itemId": "49040123-15aa-4334-b207-14dc95251786",
+            "isSecure": false,
+            "createdDate": "2024-11-09T02:33:15.000Z",
+            "orderIndex": 1689585851017,
+            "metaData": {
+              "description": "Describe your video here",
+              "title": "Video Title",
+              "link": {
+                "type": "none",
+                "target": "_blank"
+              },
+              "type": "video",
+              "customPoster": "",
+              "isExternal": false,
+              "height": 1080,
+              "width": 1920,
+              "name": "pexels-ксения-капустина-9350509-1080x1920-30fps.mp4",
+              "posters": [
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_f6bbdd3a41df4bcab09c7333855ba583f000.jpg"
+                },
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_f6bbdd3a41df4bcab09c7333855ba583f001.jpg"
+                },
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_f6bbdd3a41df4bcab09c7333855ba583f002.jpg"
+                },
+                {
+                  "height": 1080,
+                  "width": 1920,
+                  "url": "8bb438_f6bbdd3a41df4bcab09c7333855ba583f003.jpg"
+                }
+              ],
+              "qualities": [
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 1080,
+                  "quality": "1080p",
+                  "width": 1920
+                },
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 406,
+                  "quality": "720p",
+                  "width": 720
+                },
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 270,
+                  "quality": "480p",
+                  "width": 480
+                },
+                {
+                  "formats": [
+                    "mp4"
+                  ],
+                  "height": 202,
+                  "quality": "360p",
+                  "width": 360
+                }
+              ],
+              "duration": 10043
+            },
+            "mediaUrl": "8bb438_f6bbdd3a41df4bcab09c7333855ba583"
+          }
+        ],
+        "totalItemsCount": 12
+      }
+    }
+  },
+  "ooi": {
+    "failedInSsr": {}
+  },
+  "builderComponentsWarmupData": {}
+}
