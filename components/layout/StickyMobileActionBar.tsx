@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { Phone, MessageCircle, FileText } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/lib/business";
 
 export function StickyMobileActionBar() {
@@ -13,12 +12,10 @@ export function StickyMobileActionBar() {
     const handleResize = () => {
       if (window.visualViewport) {
         const heightDiff = window.innerHeight - window.visualViewport.height;
-        // Keyboard typically occupies 150px+ of viewport
         setIsKeyboardOpen(heightDiff > 150);
       }
     };
 
-    // Also listen to focus events on form fields
     const handleFocusIn = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
       if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.tagName === "SELECT")) {
@@ -41,47 +38,37 @@ export function StickyMobileActionBar() {
     };
   }, []);
 
-  // Hide sticky bar when virtual keyboard is open to avoid obstruction
   if (isKeyboardOpen) return null;
 
   return (
     <aside 
-      aria-label="Quick Action Bar"
-      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-background/95 backdrop-blur-lg border-t border-surface-border px-3 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl transition-transform duration-200"
+      aria-label="Mobile Quick Action Bar"
+      className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-background/95 backdrop-blur-lg border-t border-surface-border px-3 pt-2.5 pb-[calc(0.6rem+env(safe-area-inset-bottom,0px))] shadow-2xl transition-transform duration-200"
     >
-      <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
+      {/* 50/50 Split Bottom Buttons */}
+      <div className="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
         
-        {/* Button 1: Call */}
+        {/* Left Button (Dark Surface): Call Garage */}
         <a
           href={`tel:${BUSINESS_CONFIG.phoneLandlineRaw}`}
-          className="flex flex-col items-center justify-center gap-1 bg-surface-raised active:bg-surface-elevated text-slate-100 border border-surface-border rounded-xl py-2 px-1 text-xs font-semibold min-h-[50px] transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-glow"
-          aria-label={`Call workshop on ${BUSINESS_CONFIG.phoneLandline}`}
+          className="flex items-center justify-center gap-2 bg-surface border border-surface-borderHover active:bg-surface-raised text-white rounded-xl py-3 px-2 text-xs font-bold min-h-[48px] shadow-sm transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber"
+          aria-label="Call Garage on 01784 694898"
         >
-          <Phone className="w-4 h-4 text-brand-blue-light" />
-          <span>Call</span>
+          <Phone className="w-4 h-4 text-brand-amber shrink-0" />
+          <span className="truncate">Call Garage (01784 694898)</span>
         </a>
 
-        {/* Button 2: WhatsApp */}
+        {/* Right Button (Emerald WhatsApp): WhatsApp Photos */}
         <a
-          href={BUSINESS_CONFIG.whatsappLink}
+          href="https://wa.me/447412895092?text=Hi%20Shine%20Auto,%20I'd%20like%20a%20quote%20for%20my%20car"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center gap-1 bg-surface-raised active:bg-surface-elevated text-emerald-400 border border-surface-border rounded-xl py-2 px-1 text-xs font-semibold min-h-[50px] transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          aria-label="Message Shine Auto Centre on WhatsApp"
+          className="flex items-center justify-center gap-2 bg-[#25D366] active:bg-emerald-600 text-slate-950 font-black rounded-xl py-3 px-2 text-xs min-h-[48px] shadow-lg shadow-emerald-500/20 transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+          aria-label="Send damage photos to Shine Auto on WhatsApp"
         >
-          <MessageCircle className="w-4 h-4 text-emerald-400" />
-          <span>WhatsApp</span>
+          <MessageCircle className="w-4 h-4 text-slate-950 shrink-0" />
+          <span className="truncate">WhatsApp Photos</span>
         </a>
-
-        {/* Button 3: Get a Quote */}
-        <Link
-          href="/quote"
-          className="flex flex-col items-center justify-center gap-1 bg-gradient-to-r from-brand-amber to-brand-amber-hover text-slate-950 font-bold rounded-xl py-2 px-1 text-xs shadow-md shadow-brand-amber/20 min-h-[50px] transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber-light"
-          aria-label="Get a repair quote"
-        >
-          <FileText className="w-4 h-4 text-slate-950" />
-          <span>Get Quote</span>
-        </Link>
 
       </div>
     </aside>

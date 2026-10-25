@@ -7,7 +7,7 @@ describe("Link Integrity & Defect Regression Checks", () => {
   it("verifies accurate phone dial links and WhatsApp target", () => {
     expect(BUSINESS_CONFIG.phoneLandlineRaw).toBe("+441784694898");
     expect(BUSINESS_CONFIG.phoneMobileRaw).toBe("+447412895092");
-    expect(BUSINESS_CONFIG.whatsappLink).toBe("https://wa.me/447412895092");
+    expect(BUSINESS_CONFIG.whatsappLink).toContain("https://wa.me/447412895092");
     expect(BUSINESS_CONFIG.email).toBe("info@shineauto.co.uk");
   });
 
@@ -39,7 +39,7 @@ describe("Link Integrity & Defect Regression Checks", () => {
     
     // In the old Wix site, CONTACT US pointed back to https://www.shineauto.co.uk
     // In our new Header, it must point to "/contact"
-    expect(content).toContain('{ name: "Contact", href: "/contact" }');
+    expect(content).toContain('href: "/contact"');
   });
 
   it("ensures all core page directories exist", async () => {

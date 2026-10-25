@@ -9,40 +9,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#080B14",
+        background: "#0B0B0D",
         surface: {
-          DEFAULT: "#101626",
-          raised: "#161F36",
-          elevated: "#1D2846",
-          border: "#233054",
+          DEFAULT: "#141417",
+          raised: "#1C1C22",
+          elevated: "#24242C",
+          border: "#1C1C22",
+          borderHover: "#2E2E38",
         },
         brand: {
+          amber: {
+            DEFAULT: "#F59E0B",
+            hover: "#D97706",
+            gold: "#DCAE53",
+            light: "#FDE68A",
+          },
+          emerald: {
+            DEFAULT: "#10B981",
+            whatsapp: "#25D366",
+            hover: "#059669",
+            dark: "#064E3B",
+          },
           blue: {
             DEFAULT: "#2563EB",
             hover: "#1D4ED8",
             light: "#3B82F6",
             glow: "#60A5FA",
           },
-          amber: {
-            DEFAULT: "#F97316",
-            hover: "#EA580C",
-            light: "#FB923C",
-          },
-          navy: {
-            900: "#080B14",
-            800: "#101626",
-            700: "#161F36",
-            600: "#233054",
-          }
-        }
+        },
       },
       fontFamily: {
-        sans: ["var(--font-jakarta)", "sans-serif"],
+        sans: ["var(--font-jakarta)", "Inter", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       animation: {
         "shine-sweep": "shine 3s ease-in-out infinite",
-        "pulse-subtle": "pulseSubtle 2.5s ease-in-out infinite",
+        "pulse-subtle": "pulseSubtle 2s ease-in-out infinite",
       },
       keyframes: {
         shine: {
@@ -51,9 +54,9 @@ const config: Config = {
         },
         pulseSubtle: {
           "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.6" },
-        }
-      }
+          "50%": { opacity: "0.5" },
+        },
+      },
     },
   },
   plugins: [],
