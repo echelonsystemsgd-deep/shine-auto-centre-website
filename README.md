@@ -19,9 +19,10 @@ Replaces friction-heavy 8-field forms with an interactive, instant intake experi
 - **Direct Upload Route**: Alternative drag-and-drop photo uploader with preview for customers preferring web intake.
 
 ### 2. Interactive Before & After Damage Recovery Slider
-- Draggable split-screen comparison slider showcasing real bodyshop restorations.
-- Highlighted case: *BMW 4 Series Rear Quarter & Bumper Respray — Turnaround: 24 Hours*.
-- Full mobile touch drag support and responsive layout.
+- **Silky-Smooth Clip-Path Reveal**: Built with CSS `clipPath` and HTML5 Pointer Capture, ensuring pixel-perfect alignment between layers with zero image squishing or distortion.
+- **5 Multi-Category Real Workshop Showcases**: Switchable tabs for Bumper SMART Repair (BMW), Dent & Scratch (Mercedes-Benz), Alloy Wheel Refurb (Audi), Full Respray (VW Golf), and Collision Alignment (BMW 3 Series).
+- **1-Tap Quick Split Controls**: Quick buttons for "100% Before", "50/50 Split", and "100% After" optimized for mobile thumb interaction.
+- **Accessible & Touch-Optimized**: Full keyboard navigation (Arrow keys / Home / End) and native ARIA slider semantics.
 
 ### 3. Clear Service Pillars & Transparent Pricing Anchors
 6 core service cards with real workshop photos, price guidelines, and turnaround metrics:

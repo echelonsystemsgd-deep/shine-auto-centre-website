@@ -66,9 +66,16 @@
   - Reassurance notice ("under 2 hours response"), prototype badge, and WhatsApp follow-up link.
 
 ### B. Interactive Before & After Slider (`/components/home/BeforeAfterSlider.tsx`)
-- Draggable split-view slider comparing damaged vehicle vs. mirror-finish repair.
-- Featured case: *BMW 4 Series Rear Quarter & Bumper Respray — Turnaround: 24 Hours*.
-- Supports touch drag, mouse movement, and keyboard accessibility.
+- **Zero-Distortion CSS Clip-Path**: Uses `clipPath: polygon(0% 0%, ${sliderPosition}% 0%, ...)` on identical 100% full-bleed image layers so that neither image stretches, squishes, or misaligns during sliding.
+- **Hardware-Accelerated Pointer Tracking**: Uses HTML5 Pointer Events with `setPointerCapture` and `touch-action: none` to provide silky-smooth drag tracking on touch screens, mice, and trackpads with zero jitter or scroll conflict.
+- **5 Multi-Category Workshop Showcases**: Interactive switcher tabs allow customers to inspect real Stanwell workshop repairs across 5 categories:
+  1. *Bumper SMART Repair* (BMW Saloon Rear Bumper Scuff & Weld — 6 Hours)
+  2. *Dent & Scratch Removal* (Mercedes-Benz C-Class Panel Crease — 24 Hours)
+  3. *Alloy Wheel Refurbishment* (Audi S-Line Diamond-Cut Kerb Rash — 4 Hours)
+  4. *Full Panel Respray* (VW Golf GTI Bonnet & Wing Clearcoat Cure — 48 Hours)
+  5. *Accident Collision Repair* (BMW 3 Series Structural Impact Alignment — 3 Days)
+- **1-Tap Quick Split Controls**: Instant buttons for "View 100% Before", "50/50 Split View", and "View 100% After" for effortless one-handed smartphone comparison.
+- **Accessible Slider Range**: Embedded ARIA attributes and hidden range input enabling left/right arrow keyboard navigation.
 
 ### C. 6 Clear Service Pillars (`/components/home/ServicePillars.tsx`)
 - Dent & Scratch Repair (from £95)
